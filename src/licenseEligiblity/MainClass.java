@@ -3,7 +3,7 @@ package licenseEligiblity;
 public class MainClass {
 	public static void main(String[] args) {
 		LicenseAuthority license = new LicenseAuthority();
-		license.age = 18;
+		license.age = 28;
 		license.licensecategory = "G1";	
 		if(license.age>=18&&license.licensecategory== "No License" )
 		{
