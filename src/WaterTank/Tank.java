@@ -9,8 +9,9 @@ int tankCapacity = 100;
  int currentlevel = 0;
  
  //method to fill the Tank
-	
-//(initialize counter; checkcondition;increment counter
+
+ //Using for loop to analyze the condition and  iteration till maximum capacity is met
+//(initialize counter; checkcondition;increment counter)
 	 
 	 for (int i=0;i<tankCapacity;i+=10) {
 		 
