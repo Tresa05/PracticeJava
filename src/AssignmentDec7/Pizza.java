@@ -13,7 +13,7 @@ public class Pizza {
 		int pizzaPrice = 0;
 		// Switch statement to determine the base price based on the pizza size
 
-		switch (size.toLowerCase()) {
+		switch (size) {
 		case ("small"):
 			pizzaPrice = price[0];
 			break;
