@@ -4,25 +4,26 @@ import java.util.Scanner;
 
 public class Pizza {
 
-	int[] price = { 15, 20, 25 }; //initializing
+	int[] price = { 15, 20, 25 }; // initializing
 	String size;
-    boolean addPepperoni;
-    boolean addExtraCheese;
 
-	void calculate() {
+	boolean addPepperoni;
+	boolean addExtraCheese;
+
+	void calculateprice() {
 		int pizzaPrice = 0;
 		// Switch statement to determine the base price based on the pizza size
 
-		switch (size) {
+	switch (size) {
 		case ("small"):
 			pizzaPrice = price[0];
-			break;
+			//break; 
 		case ("medium"):
 			pizzaPrice = price[1];
-			break;
+			//break;
 		case ("large"):
 			pizzaPrice = price[2];
-			break;
+			//break;
 		}
 
 		if (addPepperoni) {
@@ -34,12 +35,12 @@ public class Pizza {
 			}
 		}
 
-		// If the pizza has extra cheese, add the additional price to the base price
+		// If the pizza order  has extra cheese, add the additional price to the base price
 		if (addExtraCheese) {
 			pizzaPrice += 1;
 		}
 
-		// Display the final bill to the user
+		// Display the the bill to user
 		System.out.println("Your total bill is $" + pizzaPrice);
 	}
 
