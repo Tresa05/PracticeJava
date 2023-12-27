@@ -2,11 +2,6 @@ package assignmentDec20;
 
 public class MysteryCruise extends CruiseCompany {
 
-	private String cruiseName;
-	private int numOfDays;
-	private double adultRate;
-	private double childRate;
-
 	public MysteryCruise(String cruiseName, double adultRate, double childRate, int numOfDays) {
 		super("MysteryCruise", 45.99, 12.99, 2);
 
@@ -15,8 +10,8 @@ public class MysteryCruise extends CruiseCompany {
 	// Method to calculate the cruise cost
 	@Override
 	public double cruiseCost(int numOfAdults, int numOfChildren) {
-		double totalCost = (numOfAdults * adultRate + numOfChildren * childRate) * numOfDays;
-		return totalCost;
+		double Cost = (numOfAdults * adultRate + numOfChildren * getChildRate()) * numOfDays;
+		return Cost;
 	}
 
 	// Method to calculate meal cost
