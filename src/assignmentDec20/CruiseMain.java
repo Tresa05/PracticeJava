@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class CruiseMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
-		try (Scanner scanner = new Scanner(System.in)) {
+		  Scanner scanner = new Scanner(System.in); {
 			// Taking user input for cruise selection
 			System.out.println(
 					"We offfer 4 different packages as displayed below. Please enter the cruise that you want to select:");
