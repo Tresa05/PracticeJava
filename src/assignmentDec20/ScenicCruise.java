@@ -2,23 +2,16 @@ package assignmentDec20;
 
 public class ScenicCruise extends CruiseCompany {
 
-	public ScenicCruise(String cruiseName, double adultRate, double childRate, int numOfDays) {
+	public ScenicCruise() {
 		super("ScenicCruise", 43.99, 12.99, 3);
-
 	}
 
-	// Method to calculate the cruise cost
 	@Override
-	public double cruiseCost(int numOfAdults, int numOfChildren) {
-		double Cost = (numOfAdults * adultRate + numOfChildren * getChildRate()) * numOfDays;
-		return Cost;
+	public void displayCruiseDetails() {
+		System.out.println("Special feature: Includes Whale watching");
+		System.out.println(
+				"Price For Adults (greater than 12)    : 43.99 per day\nPrice For Children (above 5)    : 12.99 per day");
+		System.out.println(
+				"Buffet Special Price:/n Adults (greater than 12) : 20.99 per day /nChildren (above 5) : 4.99");
 	}
-
-	// Method to calculate meal cost
-	@Override
-	public double CostWithMeal(int numOfAdults, int numOfChildren) {
-		double mealCost = (numOfAdults * 20.99 + numOfKids * 4.99) * numOfDays;
-		return cruiseCost(numOfAdults, numOfChildren) + mealCost;
-	}
-
 }

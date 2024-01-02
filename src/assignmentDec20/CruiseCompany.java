@@ -6,8 +6,6 @@ public class CruiseCompany {
 	protected int numOfDays;
 	protected double adultRate;
 	public double childRate;
-	public int numOfAdults;
-	public int numOfKids;
 
 	public CruiseCompany(String cruiseName, double adultRate, double childRate, int numOfDays) {
 		this.cruiseName = cruiseName;
@@ -16,53 +14,64 @@ public class CruiseCompany {
 		this.numOfDays = numOfDays;
 	}
 
-	// Getter method for cruise name
+//getter methods
+
 	public String getCruiseName() {
 		return cruiseName;
 	}
 
-	// Getter method for adult rate
-	public double getAdultRate() {
+	public int getnumOfdays() {
+		return numOfDays;
+	}
+
+	public double getadultRate() {
 		return adultRate;
 	}
 
-	// Getter method for child rate
-	public double getChildRate() {
+	public double getchildrate() {
 		return childRate;
 	}
 
-	// Getter method for number of days
-	public int getNumOfDays() {
-		return numOfDays;
+// Method calculating total cost without meals
+
+	public double calculateCost(int numOfAdults, int numOfChildren) {
+		double totalCost = (numOfAdults * adultRate + numOfChildren * childRate) * numOfDays;
+		return totalCost;
 	}
-	// Method to calculate the cruise cost
+// Method calculating total cost with meals
 
-	public double cruiseCost(int numOfAdults, int numOfChildren) {
-		double Cost = (numOfAdults * adultRate + numOfChildren * childRate) * numOfDays;
-		return Cost;
+	public double calculateCostwithMeals (int numOfAdults, int numOfChildren) {
+		double totalCostWithoutMeals = calculateCost(numOfAdults, numOfChildren);
+
+       double mealCost = (numOfAdults * 20.99 + numOfChildren * 4.99) * numOfDays;
+        return totalCostWithoutMeals + mealCost;
 	}
-
-	// Method to calculate meal cost
-
-	public double CostWithMeal(int numOfAdults, int numOfChildren) {
-		double mealCost = (numOfAdults * 20.99 + numOfKids * 4.99) * numOfDays;
-		return (cruiseCost(numOfAdults, numOfChildren) + mealCost);
-	}
-
-	public double calculateTax(double totalCost) {
-		// TODO Auto-generated method stub
+//Method Displaying Cruise Details
+	
+	 public void displayCruiseDetails() {
+		 System.out.println("Cruise Details!\n The Cruise you have selected is" + cruiseName);
+		 System.out.println("Rates for Adults: $" + adultRate + " per day" );
+	     System.out.println("Rate for Children: $" + childRate + " per day");
+	     System.out.println("Number of Days: " + numOfDays);
+	 }
+// Method For tax calculations	 
+	 public double calculateTax(double totalCost) {
 		return 0.15 * totalCost;
+		}
+// method for Final bill Display
+		public void displayBill(double totalCost, double tax) {
+			double finalBill = totalCost + tax;
+			System.out.println("Your Package includes: ");
+			System.out.println("Cruise Name: " + cruiseName);
+			System.out.println("Number of Days: " + numOfDays);
+			System.out.println("Total Price: $" + totalCost);
+			System.out.println("HST @ (15%): $" + tax);
+			System.out.println("Final Bill Amount: $" + finalBill);
+
+		}
+
+
+		
 	}
+	
 
-	public void displayBill(double totalCost, double tax) {
-		double finalBill = totalCost + tax;
-		System.out.println("Your Package includes: ");
-		System.out.println("Cruise Name: " + cruiseName);
-		System.out.println("Number of Days: " + numOfDays);
-		System.out.println("Total Price: $" + totalCost);
-		System.out.println("HST @ (15%): $" + tax);
-		System.out.println("Final Bill Amount: $" + finalBill);
-
-	}
-
-}

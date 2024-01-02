@@ -2,23 +2,18 @@ package assignmentDec20;
 
 public class DiscoveryCruise extends CruiseCompany {
 
-	public DiscoveryCruise(String cruiseName, double adultRate, double childRate, int numOfDays) {
+	public DiscoveryCruise() {
 		super("DiscoveryCruise", 39.99, 9.99, 4);
 
 	}
 
-	// Method to calculate the cruise cost
 	@Override
-	public double cruiseCost(int numOfAdults, int numOfChildren) {
-		double Cost = (numOfAdults * adultRate + numOfChildren * getChildRate()) * numOfDays;
-		return Cost;
-	}
-
-	// Method to calculate meal cost
-	@Override
-	public double CostWithMeal(int numOfAdults, int numOfChildren) {
-		double mealCost = (numOfAdults * 20.99 + numOfKids * 4.99) * numOfDays;
-		return cruiseCost(numOfAdults, numOfChildren) + mealCost;
+	public void displayCruiseDetails() {
+		System.out.println("Special feature: Discovering the Royal carribean");
+		System.out.println(
+				"Price For Adults (greater than 12)    : 39.99 per day\nPrice For Children (above 5)    : 9.99 per day");
+		System.out.println(
+				"Buffet Special Price:/n Adults (greater than 12) : 20.99 per day /nChildren (above 5) : 4.99");
 	}
 
 }
