@@ -40,38 +40,36 @@ public class CruiseCompany {
 	}
 // Method calculating total cost with meals
 
-	public double calculateCostwithMeals (int numOfAdults, int numOfChildren) {
+	public double calculateCostwithMeals(int numOfAdults, int numOfChildren) {
 		double totalCostWithoutMeals = calculateCost(numOfAdults, numOfChildren);
 
-       double mealCost = (numOfAdults * 20.99 + numOfChildren * 4.99) * numOfDays;
-        return totalCostWithoutMeals + mealCost;
+		double mealCost = (numOfAdults * 20.99 + numOfChildren * 4.99) * numOfDays;
+		return totalCostWithoutMeals + mealCost;
 	}
 //Method Displaying Cruise Details
-	
-	 public void displayCruiseDetails() {
-		 System.out.println("Cruise Details!\n The Cruise you have selected is" + cruiseName);
-		 System.out.println("Rates for Adults: $" + adultRate + " per day" );
-	     System.out.println("Rate for Children: $" + childRate + " per day");
-	     System.out.println("Number of Days: " + numOfDays);
-	 }
-// Method For tax calculations	 
-	 public double calculateTax(double totalCost) {
-		return 0.15 * totalCost;
-		}
-// method for Final bill Display
-		public void displayBill(double totalCost, double tax) {
-			double finalBill = totalCost + tax;
-			System.out.println("Your Package includes: ");
-			System.out.println("Cruise Name: " + cruiseName);
-			System.out.println("Number of Days: " + numOfDays);
-			System.out.println("Total Price: $" + totalCost);
-			System.out.println("HST @ (15%): $" + tax);
-			System.out.println("Final Bill Amount: $" + finalBill);
 
-		}
-
-
-		
+	public void displayCruiseDetails() {
+		System.out.println("Cruise Details!\n The Cruise you have selected is" + cruiseName);
+		System.out.println("Rates for Adults: $" + adultRate + " per day");
+		System.out.println("Rate for Children: $" + childRate + " per day");
+		System.out.println("Number of Days: " + numOfDays);
 	}
-	
 
+// Method For tax calculations	 
+	public double calculateTax(double totalCost) {
+		return 0.15 * totalCost;
+	}
+
+// method for Final bill Display
+	public void displayBill(double totalCost, double tax) {
+		double finalBill = totalCost + tax;
+		System.out.println("Your Package includes: ");
+		System.out.println("Cruise Name: " + cruiseName);
+		System.out.println("Number of Days: " + numOfDays);
+		System.out.println("Total Price: $" + totalCost);
+		System.out.println("HST @ (15%): $" + tax);
+		System.out.println("Final Bill Amount: $" + finalBill);
+
+	}
+
+}

@@ -34,13 +34,14 @@ public class UserClass {
 	}
 
 	public String getEmailId() {
-        return emailId;
+		return emailId;
 	}
 
 // Setter methods
 	public String setname(String name) {
 		return name;
 	}
+
 // method to set Username
 	public void setUsername(String username) {
 		this.username = username;
@@ -76,8 +77,7 @@ public class UserClass {
 		while (!isValidPassword) {
 			if (passWord.length() < 8) {
 				System.out.println("Password not created. Please enter a password with at least 8 characters.");
-			} 
-			else {
+			} else {
 				isValidPassword = true;
 			}
 
@@ -87,8 +87,6 @@ public class UserClass {
 			}
 		}
 	}
-
-	
 
 	// method for login
 	public void login() {

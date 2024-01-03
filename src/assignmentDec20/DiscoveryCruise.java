@@ -11,9 +11,9 @@ public class DiscoveryCruise extends CruiseCompany {
 	public void displayCruiseDetails() {
 		System.out.println("Special feature: Discovering the Royal carribean");
 		System.out.println(
-				"Price For Adults (greater than 12)    : 39.99 per day\nPrice For Children (above 5)    : 9.99 per day");
+				"Price For Adults (greater than 12)    : 39.99 per day \n Price For Children (above 5)    : 9.99 per day");
 		System.out.println(
-				"Buffet Special Price:/n Adults (greater than 12) : 20.99 per day /nChildren (above 5) : 4.99");
+				"Buffet Special Price:\n Adults (greater than 12) : 20.99 per day \nChildren (above 5) : 4.99");
 	}
 
 }
