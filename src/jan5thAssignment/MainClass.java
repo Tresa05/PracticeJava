@@ -6,17 +6,23 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		User user = new User("tresa.1", "Password1", "Tresa", "4569228567");
-		user.register();
-		while (true) {
+		User userInterface = new User(null, null, null, null);
+		userInterface.register();
+	    String anotherBooking = null;
+		boolean chooseService=true;
+		while (chooseService) {
+			String serviceChoice=null;
+			String roomType=null;
 			System.out.println("Please enter the service you want to book ( Hotel  / Cruise):");
-			String serviceChoice = sc.nextLine();
+			serviceChoice = sc.next();
 
 			if (serviceChoice.equalsIgnoreCase("Hotel")) {
 				System.out.println("Please enter the room you want to select:");
 				System.out.println("Deluxe Suite: accommodates 2 adults and 2 children at the rate of $180/night");
 				System.out.println("Family Suite: accommodates 4 adults and 4 children at $230/night.");
-				String roomType = sc.nextLine();
+				
+				
+				roomType = sc.next();
 
 				System.out.println("Please enter the number of adults:");
 				int numAdults = sc.nextInt();
@@ -117,11 +123,15 @@ public class MainClass {
 			}
 
 			System.out.println("Do you want to book another Hotel Room or Cruise? (Yes/No)");
-			String anotherBooking = sc.nextLine();
+			 anotherBooking = sc.next();
 
-			if (!anotherBooking.equalsIgnoreCase("Yes")) {
-				break;
+			if (anotherBooking.equalsIgnoreCase("Yes")) {
+				chooseService=true;
 			}
+			else {
+				chooseService=false;
+			}
+			
 		}
 
 		System.out.println("Thank you for using the Cruise and Hotel Booking System!");
