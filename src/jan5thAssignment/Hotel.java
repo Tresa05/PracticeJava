@@ -32,16 +32,19 @@ package jan5thAssignment;
 
 	        // Calculate total price including additional meals and tax
 	        double totalPriceOfStay = PricePerNight * noOfDays;
-	        double mealsFee = 25.0 * numAdults + 5.0 * numChildren;
+	        double adultLunchFee = 25.0 * numAdults; 
+	        double childLunchFee = 5.0 * numChildren;
+	        double totalLunchFee = adultLunchFee+childLunchFee;
 	        double tax = 0.18 * totalPriceOfStay;
 
 	        // Display the calculated total price
 	        System.out.println("Total Price for Hotel Stay: $" + totalPriceOfStay);
-	        System.out.println("Meals Fee: $" + mealsFee);
+	        System.out.println("Lunch Pre-Booked Special Rate Adults	: $" + adultLunchFee);
+	        System.out.println("Lunch Pre-Booked Special Rate Children	: $" + childLunchFee);
 	        System.out.println("Tax (18%): $" + tax);
-	        System.out.println("Final Price: $" + (totalPriceOfStay + mealsFee + tax));
+	        System.out.println("Final Price: $" + (totalPriceOfStay + totalLunchFee + tax));
 	        
 	        // Return the final price
-	        return totalPriceOfStay + mealsFee + tax;
+	        return totalPriceOfStay + totalLunchFee + tax;
 	    }
 	}

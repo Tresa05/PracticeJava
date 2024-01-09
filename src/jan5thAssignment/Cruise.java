@@ -50,7 +50,7 @@ public Cruise(int noOfDays,String cruiseName, double adultRate, double childRate
 //Method Displaying Cruise Details
 
 	public void displayCruiseDetails() {
-		System.out.println("Cruise Details!\n The Cruise you have selected is" + cruiseName);
+		System.out.println("Cruise Details! The Cruise you have selected is" +   cruiseName);
 		System.out.println("Rates for Adults: $" + adultRate + " per day");
 		System.out.println("Rate for Children: $" + childRate + " per day");
 		System.out.println("Number of Days: " + noOfDays);
@@ -72,6 +72,8 @@ public Cruise(int noOfDays,String cruiseName, double adultRate, double childRate
 		System.out.println("Final Bill Amount: $" + finalBill);
 
 	}
+
+	
 		
 		
 		

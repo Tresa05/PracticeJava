@@ -127,7 +127,7 @@ public class User {
 			return false;
 		}
 
-		if (phoneNumber == null || !phoneNumber.matches("\\d{10}")) {
+		if (phoneNumber == null || !(phoneNumber.length()!= 10)) {
 			System.out.println("Invalid phone number format. Please enter 10 digits without spaces or hyphens.");
 			return false;
 		}
